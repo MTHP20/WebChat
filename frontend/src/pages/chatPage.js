@@ -17,10 +17,11 @@ const ChatPage = () => {
     return (
         <div>
             {chats.map((chat) => (
-            <div>{chat.chatName}</div>
-        ))}
-    </div>
+            <div key={chat.id}>{chat.chatName}</div>
+            ))}
+        </div>
     );
+
 };
 
 export default ChatPage;
