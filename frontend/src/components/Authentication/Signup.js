@@ -8,6 +8,7 @@ const Signup = () => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const [confirmpassword, setConfirmpassword] = useState();
   const [pic, setPic] = useState();
 
@@ -40,7 +41,7 @@ const Signup = () => {
           <Input
             type={show ? "text" : "password"}
             placeholder="Enter Your Password"
-            onChange={(e)=>setEmail(e.target.value)}
+            onChange={(e)=>setPassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -85,7 +86,7 @@ const Signup = () => {
         Sign Up
       </Button>
     </VStack>
-  )
-}
+  );
+};
 
 export default Signup;
